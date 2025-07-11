@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login & Home Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      box-sizing: border-box;
     }
     body {
-      background: #f4f4f4;
+      height: 100vh;
+      background: linear-gradient(135deg, #d2e1ec, #f0f2f5);
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      align-items: center;
     }
     .container {
       background: white;
-      padding: 40px;
+      padding: 40px 30px;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
       text-align: center;
       width: 90%;
       max-width: 400px;
+      transition: all 0.3s ease-in-out;
+    }
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 30px;
     }
     button {
-      margin: 10px;
-      padding: 12px 24px;
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
       font-size: 16px;
+      background-color: #007bff;
       border: none;
       border-radius: 8px;
-      cursor: pointer;
-      background-color: #007bff;
       color: white;
-      transition: 0.3s;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
     button:hover {
       background-color: #0056b3;
@@ -46,29 +54,30 @@
       border-radius: 12px;
       margin-bottom: 20px;
     }
+    .desc {
+      color: #444;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
     .hidden {
       display: none;
-    }
-    .desc {
-      margin: 20px 0;
-      color: #333;
-      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
-  <!-- LOGIN PAGE -->
+  <!-- Login Section -->
   <div id="loginPage" class="container">
     <h2>Login</h2>
     <button onclick="login('Instagram')">Login with Instagram</button>
     <button onclick="login('Gmail')">Login with Gmail</button>
   </div>
 
-  <!-- HOME PAGE -->
+  <!-- Home Section -->
   <div id="homePage" class="container hidden">
     <h2>Welcome to BMW Garage</h2>
-    <img src="https://cdn.pixabay.com/photo/2020/12/01/11/15/bmw-5792398_1280.jpg" alt="BMW Car">
+    <img src="https://cdn.pixabay.com/photo/2020/12/01/11/15/bmw-5792398_1280.jpg" alt="BMW Car" />
     <p class="desc">
       The BMW is more than just a car; it's a symbol of precision, performance, and luxury. With its powerful engine, sleek design, and cutting-edge technology, BMW stands as a true icon in the automotive world. Whether you're cruising through city streets or roaring down the highway, the driving experience remains unmatched. Every detail in the craftsmanship reflects elegance, and every ride becomes a statement of class and confidence.
     </p>
